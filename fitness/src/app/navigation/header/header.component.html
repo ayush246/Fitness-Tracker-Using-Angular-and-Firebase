@@ -1,0 +1,14 @@
+<mat-toolbar color="accent">
+    <div>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div>Your own exercise log maintainer</div>
+    <!-- hide feature hides th content on samll screens -->
+    <div fxFlex fxLayout fxLayoutGap="10px" fxLayoutAlign="flex-end" fxHide.xs>
+        <a *ngIf="!isAuth" routerLink="/">About the app</a>
+        <a *ngIf="isAuth" routerLink="/training">Training</a>
+        <a *ngIf="isAuth" (click)="onLogout()">Logout</a>
+    </div>
+</mat-toolbar>

@@ -1,0 +1,29 @@
+<section>
+    <br />
+    <br />
+    <div align="center">
+        <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)" class="card">
+            <h1><font face="Colleged" color="black" size="6">LOG IN!</font></h1>
+            <div class="bar"><div class="filledbar"></div></div>
+            <br />
+            <mat-form-field>
+                <input type="email" matInput
+                       placeholder="Your email" 
+                       ngModel name ="email" email required
+                       #emailInput="ngModel">
+                       <mat-hint>Enter registered email address</mat-hint>
+                <mat-error *ngIf="emailInput.hasError('required')">Field cant be empty</mat-error>
+                <mat-error *ngIf="!emailInput.hasError('required')">Email invalid</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input type="password" matInput 
+                       placeholder="Your password" 
+                       ngModel name ="password" required minlength="6">
+                       <mat-hint></mat-hint>
+            </mat-form-field>
+            <button type="submit" mat-raised-button color="primary" >Submit</button>
+            <br />
+            <mat-hint>[ Dont forget to logout after you are done ]</mat-hint>
+        </form>
+    </div>
+</section>
