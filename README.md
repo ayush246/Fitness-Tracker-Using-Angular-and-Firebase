@@ -1,4 +1,4 @@
-# Fitness Tracker Using Angular(with Angular Material) and Firebase(using AngularFire)
+# Fitness Tracker Using Angular and Firebase
 
 This website was made using Angular8 (along with Angular material for UI-Design) and uses Firebase's cloud storage to both fetch and store data entered by the users. 
 
